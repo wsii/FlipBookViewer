@@ -11,8 +11,6 @@
 #include "ToolMenus.h"
 #include "WidgetBlueprint.h"
 
-static const FName FlipBookViewerTabName("FlipBookViewer");
-
 #define LOCTEXT_NAMESPACE "FFlipBookViewerModule"
 
 void FFlipBookViewerModule::StartupModule()
@@ -51,7 +49,7 @@ void FFlipBookViewerModule::ShutdownModule()
 void FFlipBookViewerModule::PluginButtonClicked()
 {
 	// Put your "OnButtonClicked" stuff here
-	const FString LoadingWidgetStr = "/Script/Blutility.EditorUtilityWidgetBlueprint'/FlipBookViewer/EUB_FlipBook.EUB_FlipBook'";
+	const FString LoadingWidgetStr = "/Script/Blutility.EditorUtilityWidgetBlueprint'/FlipBookViewer/FlipBookViewer/EUB_FlipBook.EUB_FlipBook'";
 	FSoftObjectPath WidgetSoftObjectPath = FSoftObjectPath(LoadingWidgetStr);
 
 	UWidgetBlueprint* WidgetBlueprintTemp = Cast<UWidgetBlueprint>(WidgetSoftObjectPath.TryLoad());
